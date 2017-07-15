@@ -10,6 +10,9 @@ public class Player {
         deployBattleships();
     }
 
+    public Ocean getPlayerOcean() {
+        return playerOcean;
+    }
 
     Scanner scn = new Scanner(System.in);
 

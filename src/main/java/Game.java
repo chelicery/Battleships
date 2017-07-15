@@ -1,7 +1,8 @@
 public class Game {
-    Player player = new Player();
+    public static void main(String[] args) {
+        Player player = new Player();
 
-    SIPlayer cmputer = new SIPlayer();
+        SIPlayer computer = new SIPlayer();
 
-
+    }
 }

@@ -27,26 +27,27 @@ public class Ocean {
 
     public void blastShip(int x, int y){
         if(ocean[x][y] == '@'){
-            System.out.println("Trafiony");
-            ocean[x][y] = '#'; // scored change to #
+            System.out.println("Buum, you sunk the ship");
+            ocean[x][y] = 'X'; // scored change to O
         } else {
-            System.out.println("Pudlo!");
-            ocean[x][y] = 'x'; //missed change to x
+            System.out.println("Oooh, you missed ");
+            ocean[x][y] = 'O'; //missed change to x
         }
 
     }
 
-    public boolean checkBoard(){
-
+    public int checkBoard(){
+        int ships = 0;
         for(char[] row : ocean){
             for(char c : row){
                 if(c == '@'){
-                    return false;
+                    ships++;
                 }
             }
+
         }
 
-        return true;
+        return ships;
     }
     //function returns false if ship is already deployed on this coordinates
     public boolean emptyCoordinates(int x, int y){
